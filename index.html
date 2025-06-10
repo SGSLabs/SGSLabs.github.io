@@ -1,73 +1,20 @@
-// App.jsx
-import React from 'react';
-
-// Main App component
-const App = () => {
-  return (
-    // Main container for the full-screen layout
-    <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-green-50 font-inter text-gray-800">
-      {/* Central content card */}
-      <div className="relative z-10 bg-white bg-opacity-95 backdrop-blur-lg rounded-2xl shadow-3xl p-8 md:p-12 lg:p-16 max-w-4xl w-full text-center
-                  transform transition-all duration-500 ease-out hover:scale-[1.01] hover:shadow-4xl
-                  border border-gray-200">
-
-        {/* Logo Section */}
-        <div className="mb-10 animate-fade-in-down">
-          <img
-            src="images/sgslabs_leaf.jpg" // Ensure this path is correct in your GitHub repo
-            alt="SGS Labs Logo"
-            className="mx-auto h-36 w-36 md:h-48 md:w-48 object-contain rounded-lg shadow-xl
-                       border-4 border-white transform transition-transform duration-300 hover:scale-105"
-            onError={(e) => {
-              e.currentTarget.onerror = null; // Prevents looping if placeholder also fails
-              e.currentTarget.src = 'https://placehold.co/200x200/e0f2f7/4a5568?text=SGS%20Labs%20Logo';
-            }}
-          />
-        </div>
-
-        {/* Title and Description */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 leading-tight animate-fade-in">
-          SGS Labs
-        </h1>
-        <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up">
-          Specializing in cutting-edge software advising for ClimateTech, FinTech, and ESG solutions, SGS Labs empowers businesses to navigate complex digital landscapes and achieve sustainable growth.
-        </p>
-
-        {/* Call to Action / Contact */}
-        <div className="space-y-6 animate-fade-in-up-delay">
-          <p className="text-xl md:text-2xl text-gray-700">
-            We are currently building our online presence.
-          </p>
-          <p className="text-lg md:text-xl text-gray-700 font-semibold">
-            For inquiries, please contact us:
-          </p>
-          <a
-            href="mailto:contact@sgslabs.co.uk"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg md:text-xl font-bold rounded-full
-                       bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-lg tracking-wide
-                       transform transition-all duration-300 ease-out hover:from-green-600 hover:to-blue-700
-                       hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300"
-          >
-            Email SGS Labs
-          </a>
-        </div>
-
-        {/* Footer / Copyright */}
-        <div className="mt-16 text-gray-500 text-sm md:text-base animate-fade-in-up-more">
-          &copy; {new Date().getFullYear()} SGS Labs. All rights reserved.
-        </div>
-      </div>
-
-      {/* Tailwind Custom Utilities/Animations (moved here for simplicity within the immersive) */}
-      <style>
-        {`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-
-        .font-inter {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGS Labs - Research & Innovation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for body, Outfit for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font as the base font */
+        body {
           font-family: 'Inter', sans-serif;
         }
 
-        /* Custom shadow classes */
+        /* Custom shadow classes for depth */
         .shadow-3xl {
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
         }
@@ -75,7 +22,7 @@ const App = () => {
           box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Custom fade-in animations */
+        /* Define custom fade-in animations for a modern entry effect */
         @keyframes fadeInDown {
           from {
             opacity: 0;
@@ -105,6 +52,7 @@ const App = () => {
           }
         }
 
+        /* Apply animations with different delays for staggered effect */
         .animate-fade-in-down {
           animation: fadeInDown 0.8s ease-out forwards;
         }
@@ -124,10 +72,61 @@ const App = () => {
           animation: fadeInUp 0.8s ease-out forwards;
           animation-delay: 0.8s; /* Even further delay */
         }
-        `}
-      </style>
-    </div>
-  );
-};
 
-export default App;
+        /* Apply Outfit to headings for a distinct modern look */
+        h1 {
+          font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-green-50 text-gray-800">
+    <!-- Central content card for the landing page -->
+    <div class="relative z-10 bg-white bg-opacity-95 backdrop-blur-lg rounded-2xl shadow-3xl p-8 md:p-12 lg:p-16 max-w-4xl w-full text-center
+                transform transition-all duration-500 ease-out hover:scale-[1.01] hover:shadow-4xl
+                border border-gray-200">
+
+      <!-- Logo Section -->
+      <div class="mb-10 animate-fade-in-down">
+        <img
+          src="images/sgslabs_leaf.jpg"
+          alt="SGS Labs Logo"
+          class="mx-auto h-36 w-36 md:h-48 md:w-48 object-contain rounded-lg shadow-xl
+                     border-4 border-white transform transition-transform duration-300 hover:scale-105"
+          onerror="this.onerror=null;this.src='https://placehold.co/200x200/e0f2f7/4a5568?text=SGS%20Labs%20Logo';"
+        />
+      </div>
+
+      <!-- Title and Description -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 leading-tight animate-fade-in">
+        SGS Labs
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up">
+        Specializing in cutting-edge software advising for ClimateTech, FinTech, and ESG solutions, SGS Labs empowers businesses to navigate complex digital landscapes and achieve sustainable growth.
+      </p>
+
+      <!-- Call to Action / Contact Section -->
+      <div class="space-y-6 animate-fade-in-up-delay">
+        <p class="text-xl md:text-2xl text-gray-700">
+          We are currently building our online presence.
+        </p>
+        <p class="text-lg md:text-xl text-gray-700 font-semibold">
+          For inquiries, please contact us:
+        </p>
+        <a
+          href="mailto:contact@sgslabs.co.uk"
+          class="inline-flex items-center justify-center px-8 py-4 text-lg md:text-xl font-bold rounded-full
+                     bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-lg tracking-wide
+                     transform transition-all duration-300 ease-out hover:from-green-600 hover:to-blue-700
+                     hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300"
+        >
+          Email SGS Labs
+        </a>
+      </div>
+
+      <!-- Footer / Copyright Information -->
+      <div class="mt-16 text-gray-500 text-sm md:text-base animate-fade-in-up-more">
+        &copy; 2025 SGS Labs. All rights reserved.
+      </div>
+    </div>
+</body>
+</html>
