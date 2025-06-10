@@ -15,16 +15,23 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding: 1rem;
+            padding: 2rem; /* Increased padding around the content */
+            box-sizing: border-box; /* Ensures padding doesn't cause overflow */
         }
         .card {
-            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for a modern feel */
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
             backdrop-filter: blur(10px); /* Frosted glass effect */
-            border-radius: 1.5rem; /* More rounded corners */
+            border-radius: 0; /* Square borders */
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Deeper shadow */
-            padding: 3rem; /* More padding */
-            max-width: 3xl; /* Wider card */
+            padding: 4rem; /* More padding for full-screen feel */
+            max-width: 5xl; /* Much wider card for a full-screen effect */
             width: 100%;
+            height: auto; /* Allow height to adjust */
+            min-height: 80vh; /* Minimum height for a larger appearance */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center content within the card */
+            align-items: center; /* Horizontally center content within the card */
             text-align: center;
             transform: translateY(0);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -34,36 +41,37 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
         .logo-container {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3.5rem; /* More space below the logo */
         }
         .logo {
-            width: 8rem; /* Larger logo */
-            height: 8rem;
+            width: 12rem; /* Much larger logo */
+            height: 12rem;
             object-fit: contain;
-            border-radius: 9999px; /* Full circle */
+            border-radius: 0; /* Square logo */
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             border: 5px solid rgba(255, 255, 255, 0.7); /* Thicker, semi-transparent white border */
         }
         h1 {
-            font-size: 3.5rem; /* Larger heading */
+            font-size: 4.5rem; /* Even larger heading */
             font-weight: 800; /* Extra bold */
             color: #2d3748; /* Darker gray for contrast */
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem; /* More space below heading */
             letter-spacing: -0.05em; /* Tighter letter spacing for modern feel */
         }
         p {
-            font-size: 1.125rem; /* Slightly larger body text */
+            font-size: 1.25rem; /* Larger body text */
             color: #4a5568; /* Medium gray */
-            line-height: 1.75;
-            margin-bottom: 2rem;
+            line-height: 1.8; /* Increased line height for readability */
+            margin-bottom: 2.5rem; /* More space below paragraphs */
+            max-width: 80%; /* Constrain paragraph width for better readability */
         }
         .cta-button {
             display: inline-block;
             background: linear-gradient(45deg, #38a169 0%, #3182ce 100%); /* Green to blue gradient */
             color: white;
             font-weight: 700;
-            padding: 0.875rem 2.5rem; /* More generous padding */
-            border-radius: 9999px; /* Pill-shaped button */
+            padding: 1rem 3rem; /* More generous padding */
+            border-radius: 0; /* Square button */
             transition: all 0.3s ease;
             text-decoration: none;
             box-shadow: 0 5px 15px rgba(52, 168, 83, 0.3); /* Subtle shadow matching gradient */
@@ -75,9 +83,9 @@
             filter: brightness(1.1); /* Slightly brighter on hover */
         }
         .footer-text {
-            margin-top: 3rem;
+            margin-top: 4rem; /* More space above footer */
             color: #718096; /* Lighter gray for footer */
-            font-size: 0.875rem;
+            font-size: 0.95rem; /* Slightly larger footer text */
             font-weight: 300; /* Lighter font weight */
         }
 
@@ -85,13 +93,17 @@
         @media (max-width: 768px) {
             .card {
                 padding: 2rem;
+                min-height: 70vh; /* Adjust min-height for smaller screens */
             }
             h1 {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
             }
             .logo {
-                width: 6rem;
-                height: 6rem;
+                width: 9rem;
+                height: 9rem;
+            }
+            p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -112,8 +124,8 @@
         <h1>
             SGS Labs
         </h1>
-        <p>
-            Pioneering research and innovation for a sustainable future.
+        <p class="mx-auto">
+            Pioneering research and innovation for a sustainable future. Our dedication to innovation drives us to explore new frontiers, delivering impactful solutions that address tomorrow's challenges today.
         </p>
 
         <!-- Call to Action / Contact -->
