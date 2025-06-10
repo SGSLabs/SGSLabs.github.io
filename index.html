@@ -1,151 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SGS Labs - Research & Innovation</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #e0f2f7 0%, #c8e6c9 100%); /* Soft gradient background */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 2rem; /* Increased padding around the content */
-            box-sizing: border-box; /* Ensures padding doesn't cause overflow */
-        }
-        .card {
-            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
-            backdrop-filter: blur(10px); /* Frosted glass effect */
-            border-radius: 0; /* Square borders */
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Deeper shadow */
-            padding: 4rem; /* More padding for full-screen feel */
-            max-width: 5xl; /* Much wider card for a full-screen effect */
-            width: 100%;
-            height: auto; /* Allow height to adjust */
-            min-height: 80vh; /* Minimum height for a larger appearance */
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Vertically center content within the card */
-            align-items: center; /* Horizontally center content within the card */
-            text-align: center;
-            transform: translateY(0);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        .logo-container {
-            margin-bottom: 3.5rem; /* More space below the logo */
-        }
-        .logo {
-            width: 12rem; /* Much larger logo */
-            height: 12rem;
-            object-fit: contain;
-            border-radius: 0; /* Square logo */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            border: 5px solid rgba(255, 255, 255, 0.7); /* Thicker, semi-transparent white border */
-        }
-        h1 {
-            font-size: 4.5rem; /* Even larger heading */
-            font-weight: 800; /* Extra bold */
-            color: #2d3748; /* Darker gray for contrast */
-            margin-bottom: 1.5rem; /* More space below heading */
-            letter-spacing: -0.05em; /* Tighter letter spacing for modern feel */
-        }
-        p {
-            font-size: 1.25rem; /* Larger body text */
-            color: #4a5568; /* Medium gray */
-            line-height: 1.8; /* Increased line height for readability */
-            margin-bottom: 2.5rem; /* More space below paragraphs */
-            max-width: 80%; /* Constrain paragraph width for better readability */
-        }
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #38a169 0%, #3182ce 100%); /* Green to blue gradient */
-            color: white;
-            font-weight: 700;
-            padding: 1rem 3rem; /* More generous padding */
-            border-radius: 0; /* Square button */
-            transition: all 0.3s ease;
-            text-decoration: none;
-            box-shadow: 0 5px 15px rgba(52, 168, 83, 0.3); /* Subtle shadow matching gradient */
-            border: none;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 8px 20px rgba(52, 168, 83, 0.4);
-            filter: brightness(1.1); /* Slightly brighter on hover */
-        }
-        .footer-text {
-            margin-top: 4rem; /* More space above footer */
-            color: #718096; /* Lighter gray for footer */
-            font-size: 0.95rem; /* Slightly larger footer text */
-            font-weight: 300; /* Lighter font weight */
-        }
+// App.jsx
+import React from 'react';
 
-        /* Responsive adjustments for smaller screens */
-        @media (max-width: 768px) {
-            .card {
-                padding: 2rem;
-                min-height: 70vh; /* Adjust min-height for smaller screens */
-            }
-            h1 {
-                font-size: 3.5rem;
-            }
-            .logo {
-                width: 9rem;
-                height: 9rem;
-            }
-            p {
-                font-size: 1rem;
-            }
-        }
-    </style>
-</head>
-<body class="font-inter">
-    <div class="card">
-        <!-- Logo Section -->
-        <div class="logo-container">
-            <img
-                src="images/sgslabs_leaf.jpg"
-                alt="SGS Labs Logo"
-                class="mx-auto logo"
-                onerror="this.onerror=null;this.src='https://placehold.co/200x200/e0f2f7/4a5568?text=SGS%20Labs%20Logo';"
-            >
+// Main App component
+const App = () => {
+  return (
+    // Main container for the full-screen layout
+    <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-green-50 font-inter text-gray-800">
+      {/* Central content card */}
+      <div className="relative z-10 bg-white bg-opacity-95 backdrop-blur-lg rounded-2xl shadow-3xl p-8 md:p-12 lg:p-16 max-w-4xl w-full text-center
+                  transform transition-all duration-500 ease-out hover:scale-[1.01] hover:shadow-4xl
+                  border border-gray-200">
+
+        {/* Logo Section */}
+        <div className="mb-10 animate-fade-in-down">
+          <img
+            src="images/sgslabs_leaf.jpg" // Ensure this path is correct in your GitHub repo
+            alt="SGS Labs Logo"
+            className="mx-auto h-36 w-36 md:h-48 md:w-48 object-contain rounded-lg shadow-xl
+                       border-4 border-white transform transition-transform duration-300 hover:scale-105"
+            onError={(e) => {
+              e.currentTarget.onerror = null; // Prevents looping if placeholder also fails
+              e.currentTarget.src = 'https://placehold.co/200x200/e0f2f7/4a5568?text=SGS%20Labs%20Logo';
+            }}
+          />
         </div>
 
-        <!-- Title and Description -->
-        <h1>
-            SGS Labs
+        {/* Title and Description */}
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 leading-tight animate-fade-in">
+          SGS Labs
         </h1>
-        <p class="mx-auto">
-            Pioneering research and innovation for a sustainable future. Our dedication to innovation drives us to explore new frontiers, delivering impactful solutions that address tomorrow's challenges today.
+        <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up">
+          Specializing in cutting-edge software advising for ClimateTech, FinTech, and ESG solutions, SGS Labs empowers businesses to navigate complex digital landscapes and achieve sustainable growth.
         </p>
 
-        <!-- Call to Action / Contact -->
-        <div class="space-y-4">
-            <p class="text-lg md:text-xl text-gray-700">
-                We are currently building our online presence.
-            </p>
-            <p class="text-gray-700 font-semibold">
-                For inquiries, please contact us:
-            </p>
-            <a href="mailto:contact@sgslabs.co.uk"
-               class="cta-button">
-                Email SGS Labs
-            </a>
+        {/* Call to Action / Contact */}
+        <div className="space-y-6 animate-fade-in-up-delay">
+          <p className="text-xl md:text-2xl text-gray-700">
+            We are currently building our online presence.
+          </p>
+          <p className="text-lg md:text-xl text-gray-700 font-semibold">
+            For inquiries, please contact us:
+          </p>
+          <a
+            href="mailto:contact@sgslabs.co.uk"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg md:text-xl font-bold rounded-full
+                       bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-lg tracking-wide
+                       transform transition-all duration-300 ease-out hover:from-green-600 hover:to-blue-700
+                       hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300"
+          >
+            Email SGS Labs
+          </a>
         </div>
 
-        <!-- Footer / Copyright -->
-        <div class="footer-text">
-            &copy; 2025 SGS Labs. All rights reserved.
+        {/* Footer / Copyright */}
+        <div className="mt-16 text-gray-500 text-sm md:text-base animate-fade-in-up-more">
+          &copy; {new Date().getFullYear()} SGS Labs. All rights reserved.
         </div>
+      </div>
+
+      {/* Tailwind Custom Utilities/Animations (moved here for simplicity within the immersive) */}
+      <style>
+        {`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+        .font-inter {
+          font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom shadow classes */
+        .shadow-3xl {
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+        .shadow-4xl {
+          box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Custom fade-in animations */
+        @keyframes fadeInDown {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-down {
+          animation: fadeInDown 0.8s ease-out forwards;
+        }
+        .animate-fade-in {
+          animation: fadeIn 1s ease-out forwards;
+          animation-delay: 0.2s; /* Delay for better sequence */
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 0.8s ease-out forwards;
+          animation-delay: 0.4s; /* Delay for better sequence */
+        }
+        .animate-fade-in-up-delay {
+          animation: fadeInUp 0.8s ease-out forwards;
+          animation-delay: 0.6s; /* Further delay */
+        }
+        .animate-fade-in-up-more {
+          animation: fadeInUp 0.8s ease-out forwards;
+          animation-delay: 0.8s; /* Even further delay */
+        }
+        `}
+      </style>
     </div>
-</body>
-</html>
+  );
+};
+
+export default App;
