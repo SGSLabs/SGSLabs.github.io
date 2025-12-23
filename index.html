@@ -1,132 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SGS Labs - Research & Innovation</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter for body, Outfit for headings -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
-    <style>
-        /* Apply Inter font as the base font */
-        body {
-          font-family: 'Inter', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SGS Labs - Engineering Nuclear Option for Startups</title>
 
-        /* Custom shadow classes for depth */
-        .shadow-3xl {
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-        }
-        .shadow-4xl {
-          box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.2);
-        }
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        /* Define custom fade-in animations for a modern entry effect */
-        @keyframes fadeInDown {
-          from {
-            opacity: 0;
-            transform: translateY(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
+  <!-- Google Fonts: Inter for body, Outfit for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
 
-        /* Apply animations with different delays for staggered effect */
-        .animate-fade-in-down {
-          animation: fadeInDown 0.8s ease-out forwards;
-        }
-        .animate-fade-in {
-          animation: fadeIn 1s ease-out forwards;
-          animation-delay: 0.2s; /* Delay for better sequence */
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 0.8s ease-out forwards;
-          animation-delay: 0.4s; /* Delay for better sequence */
-        }
-        .animate-fade-in-up-delay {
-          animation: fadeInUp 0.8s ease-out forwards;
-          animation-delay: 0.6s; /* Further delay */
-        }
-        .animate-fade-in-up-more {
-          animation: fadeInUp 0.8s ease-out forwards;
-          animation-delay: 0.8s; /* Even further delay */
-        }
+  <style>
+    body { font-family: 'Inter', sans-serif; }
 
-        /* Apply Outfit to headings for a distinct modern look */
-        h1 {
-          font-family: 'Outfit', sans-serif;
-        }
-    </style>
+    .shadow-3xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); }
+    .shadow-4xl { box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.2); }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in-down { animation: fadeInDown 0.8s ease-out forwards; }
+    .animate-fade-in { animation: fadeIn 1s ease-out forwards; animation-delay: 0.2s; }
+    .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; animation-delay: 0.4s; }
+    .animate-fade-in-up-delay { animation: fadeInUp 0.8s ease-out forwards; animation-delay: 0.6s; }
+    .animate-fade-in-up-more { animation: fadeInUp 0.8s ease-out forwards; animation-delay: 0.8s; }
+
+    h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+  </style>
 </head>
+
 <body class="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-green-50 text-gray-800">
-    <!-- Central content card for the landing page -->
-    <div class="relative z-10 bg-white bg-opacity-95 backdrop-blur-lg rounded-2xl shadow-3xl p-8 md:p-12 lg:p-16 max-w-4xl w-full text-center
-                transform transition-all duration-500 ease-out hover:scale-[1.01] hover:shadow-4xl
-                border border-gray-200">
+  <div class="relative z-10 bg-white bg-opacity-95 backdrop-blur-lg rounded-2xl shadow-3xl p-8 md:p-12 lg:p-16 max-w-4xl w-full text-center
+              transform transition-all duration-500 ease-out hover:scale-[1.01] hover:shadow-4xl border border-gray-200">
 
-      <!-- Logo Section -->
-      <div class="mb-10 animate-fade-in-down">
-        <img
-          src="images/sgslabs_leaf.jpg"
-          alt="SGS Labs Logo"
-          class="mx-auto h-36 w-36 md:h-48 md:w-48 object-contain rounded-lg shadow-xl
-                     border-4 border-white transform transition-transform duration-300 hover:scale-105"
-          onerror="this.onerror=null;this.src='https://placehold.co/200x200/e0f2f7/4a5568?text=SGS%20Labs%20Logo';"
-        />
-      </div>
+    <!-- Logo Section -->
+    <div class="mb-10 animate-fade-in-down">
+      <img
+        src="images/sgslabs_leaf.jpg"
+        alt="SGS Labs Logo"
+        class="mx-auto h-36 w-36 md:h-48 md:w-48 object-contain rounded-lg shadow-xl
+               border-4 border-white transform transition-transform duration-300 hover:scale-105"
+        onerror="this.onerror=null;this.src='https://placehold.co/200x200/e0f2f7/4a5568?text=SGS%20Labs%20Logo';"
+      />
+    </div>
 
-      <!-- Title and Description -->
-      <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 leading-tight animate-fade-in">
-        SGS Labs
-      </h1>
-      <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up">
-        Specializing in cutting-edge software advising for ClimateTech, FinTech, and ESG solutions, SGS Labs empowers businesses to navigate complex digital landscapes and achieve sustainable growth.
+    <!-- Title -->
+    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-4 leading-tight animate-fade-in">
+      SGS Labs
+    </h1>
+
+    <!-- Tagline -->
+    <p class="text-xl md:text-2xl text-gray-800 font-semibold mb-8 max-w-3xl mx-auto leading-snug animate-fade-in-up">
+      ☢️ The engineering nuclear option for startups.
+    </p>
+
+    <!-- Core positioning -->
+    <div class="max-w-3xl mx-auto text-left space-y-5 animate-fade-in-up">
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        SGS Labs helps founders when growth is being blocked by engineering.
+        Missed deadlines. Fragile production. Messy architecture.
+        A codebase that repels strong talent.
       </p>
 
-      <!-- Call to Action / Contact Section -->
-      <div class="space-y-6 animate-fade-in-up-delay">
-        <p class="text-xl md:text-2xl text-gray-700">
-          We are currently building our online presence.
-        </p>
-        <p class="text-lg md:text-xl text-gray-700 font-semibold">
-          For inquiries, please contact us:
-        </p>
-        <a
-          href="mailto:contact@sgslabs.co.uk"
-          class="inline-flex items-center justify-center px-8 py-4 text-lg md:text-xl font-bold rounded-full
-                     bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-lg tracking-wide
-                     transform transition-all duration-300 ease-out hover:from-green-600 hover:to-blue-700
-                     hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300"
-        >
-          Email SGS Labs
-        </a>
-      </div>
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        Bring us in when you already tried hiring, rewriting, and pushing for speed, and the machine still does not ship.
+        We rebuild the engineering system so speed goes up without sacrificing stability.
+      </p>
 
-      <!-- Footer / Copyright Information -->
-      <div class="mt-16 text-gray-500 text-sm md:text-base animate-fade-in-up-more">
-        &copy; 2025 SGS Labs. All rights reserved.
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+        Experience across fintech, edtech, travel, B2B analytics, and platform engineering.
+        We focus on durable execution, clean architecture, and operational discipline that makes hiring easier.
+      </p>
+    </div>
+
+    <!-- Outcomes -->
+    <div class="mt-10 max-w-3xl mx-auto text-left animate-fade-in-up-delay">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">Outcomes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded-xl border border-gray-200 p-5 bg-white shadow-sm">
+          <p class="text-gray-900 font-bold mb-1">Stabilize production</p>
+          <p class="text-gray-700">Fewer incidents, quieter on-call, better observability.</p>
+        </div>
+        <div class="rounded-xl border border-gray-200 p-5 bg-white shadow-sm">
+          <p class="text-gray-900 font-bold mb-1">Predictable delivery</p>
+          <p class="text-gray-700">Shorter cycle times, safer releases, less firefighting.</p>
+        </div>
+        <div class="rounded-xl border border-gray-200 p-5 bg-white shadow-sm">
+          <p class="text-gray-900 font-bold mb-1">Scalable platform</p>
+          <p class="text-gray-700">Clean boundaries, data correctness, performance under load.</p>
+        </div>
+        <div class="rounded-xl border border-gray-200 p-5 bg-white shadow-sm">
+          <p class="text-gray-900 font-bold mb-1">Hiring attractiveness</p>
+          <p class="text-gray-700">Standards, documentation, sane engineering culture.</p>
+        </div>
       </div>
     </div>
+
+    <!-- 30/60/90 -->
+    <div class="mt-10 max-w-3xl mx-auto text-left animate-fade-in-up-delay">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">30 / 60 / 90</h2>
+      <div class="space-y-3">
+        <div class="rounded-xl border border-gray-200 p-5 bg-white shadow-sm">
+          <p class="text-gray-900 font-bold mb-1">30 days</p>
+          <p class="text-gray-700">Triage risks and bottlenecks, instrument reality, stabilize the basics.</p>
+        </div>
+        <div class="rounded-xl border border-gray-200 p-5 bg-white shadow-sm">
+          <p class="text-gray-900 font-bold mb-1">60 days</p>
+          <p class="text-gray-700">Simplify architecture, enforce quality gates, reduce failure modes.</p>
+        </div>
+        <div class="rounded-xl border border-gray-200 p-5 bg-white shadow-sm">
+          <p class="text-gray-900 font-bold mb-1">90 days</p>
+          <p class="text-gray-700">Institutionalize ownership, metrics, and a codebase you can scale a team around.</p>
+        </div>
+      </div>
+
+      <p class="mt-6 text-sm md:text-base text-gray-600">
+        Not a fit: teams looking for a ticket-taker, or founders who won’t grant real ownership.
+      </p>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-12 space-y-6 animate-fade-in-up-more">
+      <p class="text-lg md:text-xl text-gray-700">
+        Building quietly. Taking the right conversations.
+      </p>
+
+      <p class="text-base md:text-lg text-gray-700 font-semibold">
+        For inquiries, contact:
+      </p>
+
+      <a
+        href="mailto:contact@sgslabs.co.uk"
+        class="inline-flex items-center justify-center px-8 py-4 text-lg md:text-xl font-bold rounded-full
+               bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-lg tracking-wide
+               transform transition-all duration-300 ease-out hover:from-green-600 hover:to-blue-700
+               hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300"
+      >
+        Email SGS Labs
+      </a>
+
+      <p class="text-sm text-gray-500 max-w-2xl mx-auto">
+        Include your stack, what’s breaking (delivery, reliability, architecture, hiring), and what success looks like in 90 days.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-16 text-gray-500 text-sm md:text-base animate-fade-in-up-more">
+      &copy; 2025 SGS Labs. All rights reserved.
+    </div>
+  </div>
 </body>
 </html>
